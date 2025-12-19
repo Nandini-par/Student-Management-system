@@ -1,0 +1,12 @@
+{% extends 'students/base.html' %}
+{% block content %}
+<section id="profile-section" class="profile-box">
+    <h1>Profile</h1>
+    <p>Welcome, {{ request.user.username }}!</p>
+
+    <ul class="profile-links">
+        <li><a href="{% url 'change_password' %}">Change Password</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+</section>
+{% endblock %}

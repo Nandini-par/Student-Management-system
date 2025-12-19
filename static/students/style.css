@@ -1,0 +1,216 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================
+   BODY
+================================ */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* ================================
+   HEADER & NAVBAR
+================================ */
+header {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Top Right Button */
+.top_right_button .btn {
+    background-color: #e74c3c;
+    padding: 8px 14px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.top_right_button .btn:hover {
+    background-color: #c0392b;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+main {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   TABLES
+================================ */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.student-table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.student-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.student-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ACTION BUTTONS */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    background-color: #217dbb;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* ================================
+   FORMS
+================================ */
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* ================================
+   LINKS & ERRORS
+================================ */
+a {
+    text-decoration: none;
+    color: #2563eb;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.errorlist li,
+.helptext {
+    font-size: 12px;
+    color: #e74c3c;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+    .student-table th,
+    .student-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

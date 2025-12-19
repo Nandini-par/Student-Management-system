@@ -1,0 +1,99 @@
+{% extends 'students/base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="center-box">
+    <h1>Student Form</h1>
+
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+
+            <p>
+                {{ form.name.label_tag }}<br>
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <span class="error">{{ form.name.errors }}</span>
+                {% endif %}
+            </p>
+
+            <p>
+                {{ form.email.label_tag }}<br>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <span class="error">{{ form.email.errors }}</span>
+                {% endif %}
+            </p>
+
+            <p>
+                {{ form.age.label_tag }}<br>
+                {{ form.age }}
+                {% if form.age.errors %}
+                    <span class="error">{{ form.age.errors }}</span>
+                {% endif %}
+            </p>
+
+            <p>
+                {{ form.phone_number.label_tag }}<br>
+                {{ form.phone_number }}
+                {% if form.phone_number.errors %}
+                    <span class="error">{{ form.phone_number.errors }}</span>
+                {% endif %}
+            </p>
+
+            <p>
+                {{ form.course.label_tag }}<br>
+                {{ form.course }}
+                {% if form.course.errors %}
+                    <span class="error">{{ form.course.errors }}</span>
+                {% endif %}
+            </p>
+
+            <p>
+                {{ form.teachers.label_tag }}<br>
+                {{ form.teachers }}
+                {% if form.teachers.errors %}
+                    <span class="error">{{ form.teachers.errors }}</span>
+                {% endif %}
+            </p>
+
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .center-box {
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        background-color: #f9f9f9;
+    }
+
+    .form-container p {
+        margin-bottom: 15px;
+    }
+
+    .error {
+        color: red;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px 15px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+{% endblock %}

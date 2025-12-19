@@ -1,0 +1,21 @@
+{% extends "students/base.html" %}
+
+{% block content %}
+<div class="center-box">
+    <h1>Admin Dashboard</h1>
+
+    <p>Welcome, <strong>{{ request.user.username }}</strong></p>
+
+    <ul class="profile-links">
+        <li>
+            <a href="{% url 'student_list' %}">View Students</a>
+        </li>
+        <li>
+            <a href="{% url 'student_add' %}">Add Student</a>
+        </li>
+        <li>
+            <a href="{% url 'profile' %}">My Profile</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
